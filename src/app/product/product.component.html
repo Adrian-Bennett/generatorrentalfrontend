@@ -1,0 +1,171 @@
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container" id ="main-container">
+
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <div class="mb-3">
+                <h1 class="card-title">Product List <span class="text-muted fw-normal ms-2"></span></h1>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="d-flex flex-wrap align-items-center justify-content-end gap-2 mb-3">
+                
+
+                <form class ="form-inline my-2 my-lg-0">
+                    <input type="search" name="key" id="searchName" class="form-control mr-sm-2" placeholder="Search product..">
+                </form>
+
+
+                <div>
+                    <a  class="nav-link" > Add New product</a>
+                </div>
+               
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-xl-3">
+            <div class="card m-b-30">
+                <div class="card-body row">
+                    <div class="col-6">
+                        <a href=""><img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="" class="img-fluid rounded-circle w-60"></a>
+                    </div>
+                    <div class="col-6 card-title align-self-center mb-0">
+                        <h5>Emma A. Main</h5>
+                        <p class="m-0">Graphics Designer</p>
+                    </div>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><i ></i>Prodcut ID :</li>
+                    <li class="list-group-item"><i ></i>Serial Number : </li>
+                    <li class="list-group-item"><i ></i>Cost Per Day : </li>
+                    <li class="list-group-item"><i ></i>Supplier ID : </li>
+                </ul>
+                <div class="card-body">
+                    <div class="float-right btn-group btn-group-sm">
+                        <a   class="btn btn-primary tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-pencil"></i> </a>
+                        <a  class="btn btn-secondary tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-times"></i></a>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<!--Add Product-->
+<div class="modal fade" id="addProductModal" tabindex="-1" role="dialog" aria-labelledby="addProductModalLable" aria-hiden="true"></div>
+<div class="modal-dialog" role="document">
+    <div class = "modal-content">
+        <div class=" modal header">
+            <h5 class="modal-title" id="addProductModalLable">Add Product</h5>
+            <button type="button" class="close" data-dismiss="modal" arial-label="Close">
+                <span arial-hidden="true">&times</span>
+            </button>
+        </div>
+
+        <div class= "modal-body">
+            <form>
+                <div class="form-group">
+                    <label for="productId">Product Id</label>
+                    <input type = "text" name="productId"
+                    class="form-control" id="productId" placeholder="productId" required>
+                </div>
+                <div class="form-group">
+                    <label for="serialNumber">Serial Number</label>
+                    <input type = "text" name="serialNumber"
+                    class="form-control" id="serialNumber" placeholder="serialNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="costPerDay">Cost Per Day</label>
+                    <input type = "text" name="costPerDay"
+                    class="form-control" id="costPerDay" placeholder="costPerDay" required>
+                </div>
+                <div class="form-group">
+                    <label for="supplierId">Supplier Id</label>
+                    <input type = "text" name="supplierId"
+                    class="form-control" id="supplierId" placeholder="supplierId" required>
+                </div>
+
+            </form>
+    </div>
+</div>
+
+
+
+<!--Edit Modal-->
+<div class="modal fade" id="updateProductModal" tabindex="-1" role="dialog" aria-labelledby="updateProductModalLable" aria-hiden="true"></div>
+<div class= "modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="updateProductModalLable">Edit Product</h5>
+            <button type="button" class="close" data-dismiss="model" arial-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form>
+              
+                <div class="form-group">
+                    <label for="productId">Product ID</label>
+                    <input type="text" name="productId" class="form-control" id="productId" aria-describedby="emailHelp" placeholder="productId" >
+                </div>
+              
+                <div class="form-group">
+                    <label for="serialNumber">Serial Number</label>
+                    <input type="text" name="serialNumber" class="form-control" id="serialNumber" aria-describedby="emailHelp" placeholder="serialNumber">
+                </div>
+
+                <div class="form-group">
+                    <label for="costPerDay">Cost Per Day</label>
+                    <input type="text" name="costPerDay" class="form-control" id="costPerDay" aria-describedby="emailHelp" placeholder="costPerDay">
+                </div>
+                <div class="form-group">
+                    <label for="supplierId">Supplier ID</label>
+                    <input type="text" name="supplierId" class="form-control" id="supplierId" aria-describedby="emailHelp" placeholder="supplierId">
+                </div>
+
+                <input type="hidden" name="id" class="form-control" id="id" placeholder="Email">
+                <input type=" hidden" name="userCode" class="form-control" id="userCode" placeholder="Email">
+                <div class="form-group">
+                    <label for="name">Email Address</label>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Email" >
+                </div>  
+            </form>
+        </div>     
+                  
+
+    </div>
+</div>
+
+<!--Delete Modal-->
+<div class="modal fade" id="deleteProductModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLable" aria-hiden="true"></div>
+<div class= "modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class ="modal-title" id="deleteModalLable">Delete Product</h5>
+            <Button type="button" class="close" data-dismiss="modal" arial-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </Button>
+        </div>
+        <div class="modal-body">
+            <p>Are you sure you want to delete product?</p>
+            <div class ="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                <button class="btn btn-danger" data-dismiss="modal">Yes</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Notification for no Products-->
+<div class="col-lg-12 col-md-12 col-xl-12">
+<div class="alert alert-info" role="alert">
+    <h4 class="alert-heading">NO PRODUCTS</h4>
+    <p> No Products were found.</p>
+</div>

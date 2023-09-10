@@ -1,0 +1,7 @@
+.navbar{
+    background-color: antiquewhite;
+
+}
+.navbar-light .navbar-nav .nav-item{
+    color: black;
+}
